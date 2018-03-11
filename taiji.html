@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>太极旋转图</title>
+    <style>
+        #container{
+            width: 300px;
+            height: 300px;
+            margin: 200px auto;
+            position: relative;
+            animation:move 2s infinite linear;
+        }
+        .blackCircle{
+            width: 300px;
+            height: 300px;
+            background: black;
+            border-radius: 50%;
+            
+        }
+        .whiteSquare{
+            width: 150px;
+            height: 300px;
+            border-top-right-radius: 150px;
+            border-bottom-right-radius: 150px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: white;
+        }
+        .medBlackCircle,.medWhiteCircle{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .medWhiteCircle{
+            background: white;
+            top: 0;
+            left: 75px;
+        }
+        .medBlackCircle{
+            background: black;
+            bottom: 0;
+            left: 75px;
+            
+        }
+        .smBlackCircle,.smWhiteCircle{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .smWhiteCircle{
+            background: white;
+            bottom: 50px;
+            left: 125px;
+        }
+        .smBlackCircle{
+            background: black;
+            top: 50px;
+            left: 125px;
+            
+        }
+        @keyframes move{
+            from{
+                transform:rotate(0deg);
+            }
+            to{
+                transform:rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="blackCircle"></div>
+        <div class="whiteSquare"></div>
+        <div class="medBlackCircle"></div>
+        <div class="medWhiteCircle"></div>
+        <div class="smBlackCircle"></div>
+        <div class="smWhiteCircle"></div>
+    </div>
+</body>
+</html>
