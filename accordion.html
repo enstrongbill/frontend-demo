@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手风琴</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #container{
+            width: 500px;
+            height: 500px;
+            /* border: 1px solid red; */
+            margin:auto;
+            
+        }
+        .list{
+            width: 500px;
+            /* height: 35px; */
+            position: relative;
+        }
+        .list a{
+            width: 488px;
+            height: 35px;
+            display: block;
+            padding-left: 12px;
+            line-height: 35px;
+            text-align: center;
+            text-decoration: none;
+             background: linear-gradient(#cecece,#8f8f8f);
+        }
+        .list span{
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid white;
+            border-bottom: 5px solid transparent;  
+        }
+        .list p{
+            height: 0;
+            overflow: auto;
+            padding-left: 10px;
+            margin-top: 5px;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            transition: all 1s;
+        }
+        .list:target p{
+            height: 100px;
+        }
+        .list:target span{
+            border-top: 5px solid transparent;
+            border-left: 5px solid white;
+        }
+        .list:hover a{
+            background: linear-gradient(#6bb2ff,#2288dd);
+            color: white;
+        }
+        .list:target a{
+            background: linear-gradient(#6bb2ff,#2288dd);
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="list" id="list1">
+            <a href="#list1">Brand</a>
+            <span></span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus quisquam soluta veniam dolorem natus assumenda tempore molestias. Commodi, molestias omnis? Accusamus aliquam obcaecati quisquam nisi quia! Soluta, similique a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit cupiditate itaque, libero consectetur harum sapiente, delectus quam, reiciendis aut dolor totam cumque corrupti aspernatur culpa cum. Tempora dolor inventore officiis?</p>
+        </div>
+        <div class="list" id="list2">
+            <a href="#list2">Brand</a>
+            <span></span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus quisquam soluta veniam dolorem natus assumenda Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium doloribus iure eius ipsa facere, quos dicta architecto cupiditate sapiente dolorem accusantium at eveniet corrupti perferendis illum vero quaerat ipsum repellendus.
+                tempore molestias. Commodi, molestias omnis? Accusamus aliquam obcaecati quisquam nisi quia! Soluta, similique a.</p>
+        </div>
+        <div class="list" id="list3">
+            <a href="#list3">Brand</a>
+            <span></span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus quisquam soluta veniam dolorem natus assumenda Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium tenetur id adipisci eos excepturi dolorem neque velit, nihil iusto. Vel tempore accusantium sunt eos quam consequatur error mollitia accusamus provident!
+                tempore molestias. Commodi, molestias omnis? Accusamus aliquam obcaecati quisquam nisi quia! Soluta, similique a.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
