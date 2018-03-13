@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>circle动画</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #container{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin:0 auto;
+        }
+        .mask{
+            display: block;
+            width: 160px;
+            height: 160px;
+             background: url('./images/3.jpg') no-repeat;
+            background-size: cover;
+            background-origin: border-box;
+            border: 20px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            position:absolute;
+            transition:all 1s;
+           
+        }
+        #container p{
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            background: black;
+            border-radius: 50%;
+            position:absolute;
+            color: white;
+            font-size: 40px;
+            
+        }
+        #container:hover .mask{
+            transform: rotateY(180deg);
+            transform-origin: center left;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        
+        <p>文字</p>
+        <div class="mask"></div>
+    </div>
+    
+    
+    
+</body>
+</html>

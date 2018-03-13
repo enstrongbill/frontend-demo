@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片放大</title>
+    <style>
+        .div1{
+            padding: 20px;
+            border: 3px solid #dedede;
+            box-shadow: 3px 3px 3px #dedede;
+            width: 222px;
+            margin: 100px auto;
+            
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            transition:transform 1s;
+            border: 1px solid #cccccc;
+            box-shadow: 1px 1px 1px #cccccc;
+            padding: 10px;
+            display: block;
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <img src="./images/1.jpg" alt="pic1">
+    </div>
+</body>
+</html>

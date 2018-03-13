@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>circle3</title>
+    <style>
+        #container1{
+            width: 200px;
+            height: 200px;
+            /* margin: 100px auto; */
+            overflow: hidden;
+
+        }
+        #container1 .show{
+            width: 200px;
+            height: 200px;
+            background: url('./images/5.jpg');
+            transition: 1s;
+            opacity: 1;
+            /* position:absolute; */
+        }
+        #container1 .hide{
+            width: 200px;
+            height: 200px;
+            background: black;
+            line-height: 200px;
+            text-align: center;
+            font-size: 50px;
+            color: white;
+            transition: 1s;
+            opacity: 0;
+        }
+        #container1:hover .hide{
+            transform: translateY(-200px);
+            opacity: 1;
+            
+        }
+        #container1:hover .show{
+            transform: translateY(-200px);
+            opacity: 0;
+        }
+
+
+        #container2{
+            width: 200px;
+            height: 200px;
+            margin:100px 230px;
+            position: relative;
+        }
+        #container2 .msg{
+            width: 200px;
+            height:200px;
+            border-radius: 50%;
+            background: black;
+            color:white;
+            font-size:20px;
+            text-align: center;
+            position:absolute;
+            transition: 1s;
+            transform-origin: bottom;
+        }
+        #container2 .mask{
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: url('./images/6.jpg');
+            border: 20px solid rgba(255,255,255,0.3);
+            position: absolute;
+            background-origin: border-box;
+            transition: 1s;
+            transform-origin: bottom;
+        }
+        #container2:hover .msg{
+            transform: scale(1.3);
+            font-size: 30px;
+        }
+        #container2:hover .mask{
+            transform: scale(0.5)
+        }
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <div class="show"></div>
+        <div class="hide">
+            我爱你
+        </div>
+    </div>
+    <div id="container2">
+        <div class="msg">我恨你</div>
+        <div class="mask"></div>
+    </div>
+</body>
+</html>

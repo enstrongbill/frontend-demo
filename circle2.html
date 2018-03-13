@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>circle动画</title>
+    <style>
+        #container{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: auto;
+            
+        }
+        #container .mask{
+            width: 160px;
+            height: 160px;
+            background: url('./images/4.jpg') no-repeat;
+            background-size: cover;
+            background-origin: border-box;
+            border: 20px solid rgba(255,255,255,0.4);
+            border-radius: 50%;
+            transition:1s;
+            transform-origin: right center;
+            position: absolute;
+            /* z-index: 1000; */
+        }
+        #container .msg{
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: white;
+            font-size: 50px;
+            background: black;
+            border-radius: 50%;
+            position:absolute;
+            
+        }
+        #container .circle{
+            width: 20px;
+            height: 20px;
+            top: 90px;
+            right: 0;
+            border-radius: 50%;
+            position:absolute;
+            background: blue;
+        }
+        #container:hover .mask{
+            transform: rotate(-90deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        
+        <div class="msg">爱你</div>
+        <div class="mask"></div>
+        <span class="circle"></span>
+    </div>
+</body>
+</html>
