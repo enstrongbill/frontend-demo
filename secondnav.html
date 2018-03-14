@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>二级导航</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 400px;
+            margin: 0 auto;
+            padding: 10px;
+            position: relative;
+            /* height: 500px; */
+        }
+        #container .firstNav,.secondNav{
+            list-style: none;
+
+        }
+        #container .firstNav{
+            height: 50px;
+        }
+        .firstNav li{
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        .firstNav>li{
+            position: relative;
+            float: left;
+            
+        
+        }
+        .firstNav li:hover{
+            /* color: white; */
+            background:#dedede;
+            cursor: pointer;
+        }
+        .firstNav>li:hover .secondNav{
+            background: black;
+            color: white;
+            display: block;
+
+        }
+        .secondNav{
+            display: none;
+            position:absolute;
+            top: 50px;
+            transition: 1s;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul class="firstNav">
+            <li>首页</li>
+            <li>产品中心
+                <ul class="secondNav">
+                    <li>产品1</li>
+                    <li>产品2</li>
+                    <li>产品3</li>
+                </ul>
+            </li>
+            <li>客户职务</li>
+            <li>联系我们</li>
+        </ul>
+    </div>
+</body>
+</html>
